@@ -1,3 +1,5 @@
+<!-- Simple filetype checking. Never rely on JS validation. Only BackEnd  -->
+
 <!DOCTYPE html>
 <html>
 <head>
