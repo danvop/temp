@@ -1,15 +1,11 @@
 <?php
 session_start();
 
-$host = "localhost";    /* Host name */
-$user = "root";         /* User */
-$password = "";         /* Password */
-$dbname = "tutorial";   /* Database name */
-
 // Create connection
-$con = mysqli_connect($host, $user, $password,$dbname);
-
-// Check connection
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
+try {
+    $pdo = new \PDO("sqlite:db.sqlite");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (\PDOException $e) {
+    print_r($e);
 }
+

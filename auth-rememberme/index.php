@@ -12,7 +12,9 @@ if( isset($_SESSION['userid']) ){
     $userid = decryptCookie($_COOKIE['rememberme']);
     
     $sql_query = "select count(*) as cntUser,id from users where id='".$userid."'";
-    $result = mysqli_query($con,$sql_query);
+    $result = $pdo->query($sql_query);
+    print_r($result);
+    die();
     $row = mysqli_fetch_array($result);
 
     $count = $row['cntUser'];
@@ -41,15 +43,17 @@ function decryptCookie( $value ) {
 
 // On submit
 if(isset($_POST['but_submit'])){
-
-    $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
-    $password = mysqli_real_escape_string($con,$_POST['txt_pwd']);
     
-    if ($uname != "" && $password != ""){
+    $name = $_POST['txt_uname'];
+    $password = $_POST['txt_pwd'];
+    
+    if ($name != "" && $password != ""){
 
-        $sql_query = "select count(*) as cntUser,id from users where username='".$uname."' and password='".$password."'";
-        $result = mysqli_query($con,$sql_query);
-        $row = mysqli_fetch_array($result);
+        $sql_query = "select count(*) as cntUser,id from users where name='".$name."' and password='".$password."'";
+        $result = $pdo->query($sql_query);
+        
+        $row = $result->fetch(\PDO::FETCH_ASSOC);
+        
         $count = $row['cntUser'];
 
         if($count > 0){
