@@ -44,12 +44,12 @@ function decryptCookie( $value ) {
 // On submit
 if(isset($_POST['but_submit'])){
     
-    $name = $_POST['txt_uname'];
+    $username = $_POST['txt_uname'];
     $password = $_POST['txt_pwd'];
     
-    if ($name != "" && $password != ""){
+    if ($username != "" && $password != ""){
 
-        $sql_query = "select count(*) as cntUser,id from users where name='".$name."' and password='".$password."'";
+        $sql_query = "select count(*) as cntUser,id from users where username='".$username."' and password='".$password."'";
         $result = $pdo->query($sql_query);
         
         $row = $result->fetch(\PDO::FETCH_ASSOC);
