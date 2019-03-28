@@ -64,8 +64,6 @@ if(isset($_POST['but_submit'])){
         $result = $pdo->query($sql_query);
         
         $row = $result->fetch(\PDO::FETCH_ASSOC);
-        print_r($row);
-        die();
         $count = $row['cntUser'];
 
         if($count > 0){
