@@ -10,3 +10,5 @@ CREATE TABLE users (
     username TEXT NOT NULL,
     password TEXT NOT NULL
 );
+
+INSERT into users(username,password) values('admin','admin');

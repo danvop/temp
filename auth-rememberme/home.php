@@ -28,5 +28,11 @@
         <form method='post' action="">
             <input type="submit" value="Logout" name="but_logout">
         </form>
+        <div>
+            <a href="test-session-kill.php">Kill session</a>
+        </div>
+        <div>
+            <a href="test-cookies-kill.php">Kill cookies</a>
+        </div>
     </body>
 </html>

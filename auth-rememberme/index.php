@@ -8,16 +8,12 @@ if( isset($_SESSION['userid']) ){
    exit;
 }else if( isset($_COOKIE['rememberme']  )){
     
-    // Decrypt cookie variable value
+    // Decrypt cookie variable value and get user id
     $userid = decryptCookie($_COOKIE['rememberme']);
-    
+    //check if user id is in the table
     $sql_query = "select count(*) as cntUser,id from users where id='".$userid."'";
     $result = $pdo->query($sql_query);
-    print_r($result);
-    die();
-    $row = mysqli_fetch_array($result);
-
-    $count = $row['cntUser'];
+    $count = $result->fetch(PDO::FETCH_ASSOC);
 
     if( $count > 0 ){
         $_SESSION['userid'] = $userid; 
@@ -28,17 +24,32 @@ if( isset($_SESSION['userid']) ){
 
 
 // Encrypt cookie
-function encryptCookie( $value ) {
-    $key  = 'youkey';
-    $newvalue = base64_encode( mcrypt_encrypt( MCRYPT_RIJNDAEL_256, md5( $key ), $value, MCRYPT_MODE_CBC, md5( md5( $key ) ) ) );
-    return( $newvalue );
+// function encryptCookie( $value ) {
+//     $key  = 'youkey';
+//     $newvalue = base64_encode( mcrypt_encrypt( MCRYPT_RIJNDAEL_256, md5( $key ), $value, MCRYPT_MODE_CBC, md5( md5( $key ) ) ) );
+//     return( $newvalue );
+// }
+
+function encryptCookie($data) {
+    $key = 'bRuD5WYw5wd0rdHR9yLlM6wt2vteuiniQBqE70nAuhU=';   
+    // Remove the base64 encoding from our key
+    $encryption_key = base64_decode($key);
+    // Generate an initialization vector
+    $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-256-cbc'));
+    // Encrypt the data using AES 256 encryption in CBC mode using our encryption key and initialization vector.
+    $encrypted = openssl_encrypt($data, 'aes-256-cbc', $encryption_key, 0, $iv);
+    // The $iv is just as important as the key for decrypting, so save it with our encrypted data using a unique separator (::)
+    return base64_encode($encrypted . '::' . $iv);  
 }
 
 // Decrypt cookie
-function decryptCookie( $value ) {
-    $key  = 'youkey';
-    $newvalue = rtrim( mcrypt_decrypt( MCRYPT_RIJNDAEL_256, md5( $key ), base64_decode( $value ), MCRYPT_MODE_CBC, md5( md5( $key ) ) ), "\0");
-    return( $newvalue );
+function decryptCookie($data) {
+    $key  = 'bRuD5WYw5wd0rdHR9yLlM6wt2vteuiniQBqE70nAuhU=';   
+    // Remove the base64 encoding from our key
+    $encryption_key = base64_decode($key);
+    // To decrypt, split the encrypted data from our IV - our unique separator used was "::"
+    list($encrypted_data, $iv) = explode('::', base64_decode($data), 2);
+    return openssl_decrypt($encrypted_data, 'aes-256-cbc', $encryption_key, 0, $iv);
 }
 
 // On submit
@@ -53,7 +64,8 @@ if(isset($_POST['but_submit'])){
         $result = $pdo->query($sql_query);
         
         $row = $result->fetch(\PDO::FETCH_ASSOC);
-        
+        print_r($row);
+        die();
         $count = $row['cntUser'];
 
         if($count > 0){
