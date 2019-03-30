@@ -8,14 +8,10 @@ html, body {
 }
 .featured {
     height: 100%;
-    /* background: linear-gradient(
-        rgba(0, 0, 0, 0.3), 
-        rgba(0, 0, 0, 0.3)),
-      url('img/1.jpg'); */
     background: linear-gradient(
         rgba(0, 0, 0, 0.3), 
-        rgba(0, 0, 0, 0.3)),                
-        url('img/1.jpg') no-repeat center;
+        rgba(0, 0, 0, 0.3)),
+      url('img/1.jpg');
    
     background-size: cover;
 }

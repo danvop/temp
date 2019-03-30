@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="featured">
-        <p>featured sentence</p>
+                
     </div>
     <div class="contact"></div>
     <div class="expert"></div>
