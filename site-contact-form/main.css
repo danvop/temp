@@ -12,8 +12,12 @@ html, body {
         rgba(0, 0, 0, 0.3), 
         rgba(0, 0, 0, 0.3)),
       url('img/1.jpg'); */
-    background: #eee url('img/1.jpg');
-
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)),                
+        url('img/1.jpg') no-repeat center;
+   
+    background-size: cover;
 }
 .contact {
     height: 100%;
