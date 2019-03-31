@@ -6,19 +6,155 @@ html, body {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .featured {
     min-height: 100%;
     background: linear-gradient(
         rgba(0, 0, 0, 0.3), 
         rgba(0, 0, 0, 0.3)),
       url('img/1.jpg');
-   
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.featured-words-header {
+    color: white;
+    font-weight: 900;
+    font-size: 4em;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.featured-words-button {
+    padding: 5px;
+    border: 2px solid white;
+    font-size: 2em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-decoration: none;
+   
+}
+
+.featured-words-button a {
+    text-decoration: none;
+    color: white;
 }
 .contact {
-    height: 100%;
-    background: green;
+    min-height: 100%;
+    background: #dfe6e9;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)),
+        url('img/2.jpg');
+    background-size: cover;
 }
+
+.contact form > *{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75)
+}
+
+.contact input[type='email'] {
+    background: #FFB74D;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    outline: none;
+}
+.contact input[type='submit']{
+    background: #FFB74D;
+    /* background: #ff7979; */
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    outline: none;
+}
+.contact input[type='submit']:active {
+    box-shadow: none;
+}
+.contact input[type='submit']:hover {
+    background: #FF9800;
+}
+.contact-prices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+.contact-prices-box {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    background: #E0E0E0;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.contact-prices-box-header {
+    background: #FFB74D;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 5px 5px 0 0;
+    letter-spacing: 1px
+}
+
+
+.contact-prices-box:hover > :first-child{
+    background: #FF9800;
+}
+.contact-prices-box:hover > :last-child{
+    background: #607D8B;
+}
+
+.contact-prices-box-content {
+    margin: auto;
+    padding: 20px;
+    text-align: justify;
+    list-style: inside;
+    font-size: 1.2em;
+}
+.contact-prices-box-price {
+    background: #90A4AE;
+    color: white;
+    margin-top: auto;
+    padding: 20px;
+    font-size: 2em;
+    font-weight: 900;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}
+
 .expert {
     height: 100%;
+    background: #c8d6e5;
 }
