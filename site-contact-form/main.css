@@ -5,6 +5,7 @@
 html, body {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .featured {
@@ -137,11 +138,14 @@ html, body {
 }
 
 .contact-prices-box-content {
-    margin: auto;
-    padding: 20px;
-    text-align: justify;
-    list-style: inside;
+    /* margin: 20 auto; */
+    padding: 10px 40px;
+    text-align: left;
+    line-height: 1.2em;
     font-size: 1.2em;
+}
+.contact-prices-box-content ul {
+    list-style-position: outside;
 }
 .contact-prices-box-price {
     background: #90A4AE;
@@ -155,6 +159,12 @@ html, body {
 }
 
 .expert {
-    height: 100%;
+    min-height: 100%;
     background: #c8d6e5;
+}
+.expert-media-img {
+    background: white;
+    width: 100px;
+    height: 100px;
+
 }
