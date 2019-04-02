@@ -19,17 +19,22 @@
         </div>
     </div>
 
-    <div class="expert" id="expert"></div>
+    <div class="expert" id="expert">
+        <div class="expert-header">
+            our expert
+        </div>
         <div class="expert-media">
             <div class="expert-media-img">
 
             </div>
             <div class="expert-media-header">
-
+                <p>name secondname</p>
             </div>
             <div class="expert-media-body">
-
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quas, in </p>
             </div>
+        </div>
+        <div></div>
         </div>
     <div class="contact">
         <div class="contact-form">
@@ -65,7 +70,7 @@
                     <ul>
                         <li>Простая консультация</li>
                         <li>Поверхностный обзор</li>
-                        <li>Разрешат потрогать патчкорд</li>
+                        <li>Разрешаем потрогать патчкорд</li>
                         <li>Безлимитный доступ на просмотр моргающих линков</li>
                     </ul>
                 </div>
@@ -82,7 +87,7 @@
                     <ul>
                         <li>Расширенная беседа</li>
                         <li>Обсуждение важных функций</li>
-                        <li>Разрешат зайти в консоль</li>
+                        <li>Разрешаем зайти в консоль</li>
                     </ul>
                 </div>
 
