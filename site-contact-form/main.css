@@ -161,10 +161,39 @@ html, body {
 .expert {
     min-height: 100%;
     background: #c8d6e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    
+}
+.expert-header {
+   text-align: center;
+    
+}
+.expert-media {
+    display: flex;
+    
+    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.expert-media > * {
+    margin: 20px;
 }
 .expert-media-img {
     background: white;
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
+}
+
+.expert-media-header {
+    text-transform: capitalize;
+
+}
+.expert-media-body {
 
 }

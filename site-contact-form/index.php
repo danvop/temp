@@ -20,17 +20,21 @@
     </div>
 
     <div class="expert" id="expert">
+        <div class="expert-header">
+            our expert
+        </div>
         <div class="expert-media">
             <div class="expert-media-img">
 
             </div>
             <div class="expert-media-header">
-
+                <p>name secondname</p>
             </div>
             <div class="expert-media-body">
-
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quas, in </p>
             </div>
         </div>
+        <div></div>
         </div>
     <div class="contact">
         <div class="contact-form">
