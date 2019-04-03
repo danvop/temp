@@ -9,14 +9,6 @@
     <script src="main.js"></script>
 </head>
 <body>
-
-    <form class="contact-form" action="">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email">
-        <textarea name="message" id="" rows="10" placeholder="Your message"></textarea>
-        <input type="submit" value="Leave a message">
-    </form> 
-
     
 </body>
 </html>
