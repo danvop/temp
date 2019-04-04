@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
-</head>
-<body>
-    
-</body>
-</html>
+<?php
+require 'vendor/autoload.php';
+ 
+use App\SQLiteConnection;
+ 
+$pdo = (new SQLiteConnection())->connect();
+if ($pdo != null)
+    echo 'Connected to the SQLite database successfully!';
+else
+    echo 'Whoops, could not connect to the SQLite database!';
