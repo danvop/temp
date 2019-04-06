@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form action="add-date.php" method="post">
+<form class="form" action="add-date.php" method="post">
     <input type="submit" value="klack">
 </form>
 <div class="output">
@@ -19,7 +19,7 @@
 <tr>
 <td><?=$event['id']?></td>
 <td><?=$event['created_at']?></td>
-<td><a href="delete.php?id=<?=$event['id']?>">X</a></td>
+<td><form method="POST" action="delete.php?id=<?=$event['id']?>"><input type="submit" ></form></td>
 </tr>
 <?php endforeach; ?>
 </table>

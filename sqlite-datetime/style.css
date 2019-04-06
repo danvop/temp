@@ -12,7 +12,7 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-form {
+.form {
     height: 50%;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@ form {
 .output {
     height: 50%;
 }
-form input[type=submit] {
+.form input[type=submit] {
     color: white;
     background: #607D8B;
     border: none;
@@ -32,10 +32,10 @@ form input[type=submit] {
     font-size: 2em;
     outline: none;
 }
-form input[type=submit]:hover {
+.form input[type=submit]:hover {
     background: #546E7A;
 }
-form input[type=submit]:active {
+.form input[type=submit]:active {
     background: #263238;
 }
 td, th {

@@ -3,6 +3,7 @@
 require "bootstrap.php";
 
 
+
 $dsn = "sqlite:sqlite.db";
 $pdo = new \PDO($dsn, null, null);
 $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
