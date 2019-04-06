@@ -17,8 +17,17 @@ class SQLiteConnection {
      */
     public function connect() {
         if ($this->pdo == null) {
-            $this->pdo = new \PDO("sqlite:" . Config::PATH_TO_SQLITE_FILE);
+            try {
+                $this->pdo = new \PDO("sqlite:" . Config::PATH_TO_SQLITE_FILE);
+                //enable error 
+                $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+                
+
+             } catch (\PDOException $e) {
+                // handle the exception here
+             }
         }
         return $this->pdo;
     }
 }
+
