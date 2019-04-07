@@ -19,7 +19,7 @@
 <tr>
 <td><?=$event['id']?></td>
 <td><?=$event['created_at']?></td>
-<td><form method="POST" action="delete.php?id=<?=$event['id']?>"><input type="submit" ></form></td>
+<td><form method="POST" action="delete.php"><button type="submit" name="id" value="<?=$event['id']?>">X</button></form></td>
 </tr>
 <?php endforeach; ?>
 </table>

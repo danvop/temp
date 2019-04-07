@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    outline: none;
 }
 body,html {
     height: 100%;
@@ -30,7 +31,6 @@ body {
     
     font-weight: 900;
     font-size: 2em;
-    outline: none;
 }
 .form input[type=submit]:hover {
     background: #546E7A;
@@ -43,4 +43,11 @@ td, th {
 }
 a {
     text-decoration: none;
+}
+button {
+    /* background: ; */
+    border: none;
+    padding: 10px;
+    /* line-height: 100%; */
+    /* text-justify: center; */
 }
