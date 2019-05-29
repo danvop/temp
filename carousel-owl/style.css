@@ -1,0 +1,13 @@
+.item {
+    background: #CACACA;
+    text-align: center;
+    
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    width: 100%;
+}
+h4 {
+    display: block;
+    height: 100%;
+}

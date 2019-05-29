@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS messages (
     message_email TEXT    NOT NULL,
     message_name TEXT,
     message_body TEXT
-);
+)

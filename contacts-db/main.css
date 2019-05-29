@@ -43,3 +43,8 @@ body {
 .messages-box {
     
 }
+
+a[href^="tel:"]:before {
+    content: "\260e";
+    margin-right: 0.5em;
+  }
