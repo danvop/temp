@@ -4,7 +4,17 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	
         // the request method is fine
-        $email = $_POST['email'];
+        if (!empty($_POST['email']) || !empty($_POST['phone'])) {
+                exit("OK");
+        }
+
+        if(!empty($_POST['email'])) {
+                $email = $_POST['email'];
+        }
+
+        if(!empty($_POST['phone'])) {
+                $phone = $_POST['phone'];
+        }
 
 } else {
     
