@@ -7,7 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!empty($_POST['email']) || !empty($_POST['phone'])) {
                 exit("OK");
         } else {
-                
+                //thow error
+                exit('enter email or phone');
         }
 
         if(!empty($_POST['email'])) {
