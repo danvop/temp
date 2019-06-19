@@ -7,10 +7,12 @@
     <title>Document</title>
     <style>
         input {
-            display: block;
+            
             margin: 10px;
             padding: 10px;
+            border:2px solid black;
             border-radius: 5px;
+            
         }
     </style>
 </head>
@@ -18,9 +20,18 @@
     <form method="POST" action="act.php">
 
         <!-- some form elements here -->
-        <input type="email" style="display:block">
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
-        <input type="checkbox" name="subscribe" id="subscribe">
+        <div>
+            <input type="email" style="display:block">
+        </div>
+        <div>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+        </div>
+        <div>
+            <input type="checkbox" name="subscribe" id="subscribe">
+            <label for="subscribe">Subscribe</label>
+        </div>
+        
+        
         <input type="submit">
 
     </form>
