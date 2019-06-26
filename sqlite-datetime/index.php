@@ -12,4 +12,5 @@ $stmt = $pdo->prepare("SELECT * FROM events ORDER by created_at desc");
 $stmt->execute();
 $events = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
+
 view('index',compact('events'));
