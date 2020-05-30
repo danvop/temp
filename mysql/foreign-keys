@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS child;
+DROP TABLE IF EXISTS parent;
+
+CREATE TABLE parent (
+    id INT NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=INNODB;
+
+CREATE TABLE child (
+    id INT,
+    parent_id INT,
+    INDEX par_ind (parent_id),
+    FOREIGN KEY (parent_id)
+        REFERENCES parent(id)
+        ON DELETE CASCADE
+) ENGINE=INNODB;
+
+INSERT INTO parent VALUES (234),(238);
+
+INSERT INTO child VALUES (1,234), (2,234), (3, 238);
+
+SELECT * FROM parent;
+SELECT * FROM child;
+
+DELETE FROM parent WHERE id=234;
+SELECT * FROM child;
