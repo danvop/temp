@@ -614,6 +614,44 @@ video {
   }
 }
 
+.btn {
+  display: inline-block;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --bg-opacity: 1;
+  background-color: #667eea;
+  background-color: rgba(102, 126, 234, var(--bg-opacity));
+  font-size: 0.875rem;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.btn:hover {
+  --bg-opacity: 1;
+  background-color: #7f9cf5;
+  background-color: rgba(127, 156, 245, var(--bg-opacity));
+}
+
+.btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.btn:active {
+  --bg-opacity: 1;
+  background-color: #5a67d8;
+  background-color: rgba(90, 103, 216, var(--bg-opacity));
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -11106,6 +11144,46 @@ video {
 }
 
 .text-6xl {
+  font-size: 4rem;
+}
+
+.hover\:text-xs:hover {
+  font-size: 0.75rem;
+}
+
+.hover\:text-sm:hover {
+  font-size: 0.875rem;
+}
+
+.hover\:text-base:hover {
+  font-size: 1rem;
+}
+
+.hover\:text-lg:hover {
+  font-size: 1.125rem;
+}
+
+.hover\:text-xl:hover {
+  font-size: 1.25rem;
+}
+
+.hover\:text-2xl:hover {
+  font-size: 1.5rem;
+}
+
+.hover\:text-3xl:hover {
+  font-size: 1.875rem;
+}
+
+.hover\:text-4xl:hover {
+  font-size: 2.25rem;
+}
+
+.hover\:text-5xl:hover {
+  font-size: 3rem;
+}
+
+.hover\:text-6xl:hover {
   font-size: 4rem;
 }
 
@@ -32722,6 +32800,46 @@ video {
     font-size: 4rem;
   }
 
+  .sm\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+  }
+
+  .sm\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+  }
+
+  .sm\:hover\:text-base:hover {
+    font-size: 1rem;
+  }
+
+  .sm\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+  }
+
+  .sm\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+  }
+
+  .sm\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+  }
+
+  .sm\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+  }
+
+  .sm\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+  }
+
+  .sm\:hover\:text-5xl:hover {
+    font-size: 3rem;
+  }
+
+  .sm\:hover\:text-6xl:hover {
+    font-size: 4rem;
+  }
+
   .sm\:leading-3 {
     line-height: .75rem;
   }
@@ -54267,6 +54385,46 @@ video {
   }
 
   .md\:text-6xl {
+    font-size: 4rem;
+  }
+
+  .md\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+  }
+
+  .md\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+  }
+
+  .md\:hover\:text-base:hover {
+    font-size: 1rem;
+  }
+
+  .md\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+  }
+
+  .md\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+  }
+
+  .md\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+  }
+
+  .md\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+  }
+
+  .md\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+  }
+
+  .md\:hover\:text-5xl:hover {
+    font-size: 3rem;
+  }
+
+  .md\:hover\:text-6xl:hover {
     font-size: 4rem;
   }
 
@@ -75818,6 +75976,46 @@ video {
     font-size: 4rem;
   }
 
+  .lg\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+  }
+
+  .lg\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+  }
+
+  .lg\:hover\:text-base:hover {
+    font-size: 1rem;
+  }
+
+  .lg\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+  }
+
+  .lg\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+  }
+
+  .lg\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+  }
+
+  .lg\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+  }
+
+  .lg\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+  }
+
+  .lg\:hover\:text-5xl:hover {
+    font-size: 3rem;
+  }
+
+  .lg\:hover\:text-6xl:hover {
+    font-size: 4rem;
+  }
+
   .lg\:leading-3 {
     line-height: .75rem;
   }
@@ -97363,6 +97561,46 @@ video {
   }
 
   .xl\:text-6xl {
+    font-size: 4rem;
+  }
+
+  .xl\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+  }
+
+  .xl\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+  }
+
+  .xl\:hover\:text-base:hover {
+    font-size: 1rem;
+  }
+
+  .xl\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+  }
+
+  .xl\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+  }
+
+  .xl\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+  }
+
+  .xl\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+  }
+
+  .xl\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+  }
+
+  .xl\:hover\:text-5xl:hover {
+    font-size: 3rem;
+  }
+
+  .xl\:hover\:text-6xl:hover {
     font-size: 4rem;
   }
 

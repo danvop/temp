@@ -8,7 +8,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    backgroundColor: ['responsive', 'hover', 'focus', 'active']
+    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+    fontSize: ['responsive', 'hover']
+
   },
   plugins: [],
 }
